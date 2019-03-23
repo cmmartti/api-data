@@ -86,7 +86,7 @@ exports.handler = (event, context, callback) => {
 
     getJson(url, (error, response) => {
         if (error) {
-            callback(null, {statusCode: 400, body: "path must be a valid resource list"});
+            callback(null, {statusCode: 400, body: `Path '${url}' must be a valid resource list`});
             return;
         }
 
